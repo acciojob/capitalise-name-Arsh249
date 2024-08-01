@@ -1,6 +1,7 @@
-//your JS code here. If required.
-let text = document.querySelector("#fname").value;
+document.addEventListener('DOMContentLoaded', (event) => {
+  const inputField = document.getElementById('fname');
 
-text.addEventListener("focusout", (event) => {
-	text.toUpperCase();
-})
+  inputField.addEventListener('blur', () => {
+    inputField.value = inputField.value.toUpperCase();
+  });
+});
